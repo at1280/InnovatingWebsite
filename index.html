@@ -44,12 +44,49 @@
             border-radius: 5px;
             margin-top: 20px;
         }
+        .carousel {
+            width: 300px;
+            height: 60px;
+            background-color: #555;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div id="logo">AT</div>
     <h1>InnovATing</h1>
-    <p>Forniamo soluzioni innovative per le tue esigenze aziendali.</p>
+    <p>Cerchiamo insieme a te le migliori soluzioni alle tue esigenze aziendali</p>
     <a href="contact.html" class="cta-button">Contattaci</a>
+    <div class="carousel" id="carousel">
+        <div class="carousel-item">Sistemi IT</div>
+        <div class="carousel-item">Automazione</div>
+        <div class="carousel-item">Ottimizzazione processi</div>
+        <div class="carousel-item">Acquisti</div>
+    </div>
+    <script>
+        const carousel = document.getElementById('carousel');
+        const items = carousel.getElementsByClassName('carousel-item');
+        let currentIndex = 0;
+
+        function showNextItem() {
+            items[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex + 1) % items.length;
+            items[currentIndex].style.display = 'flex';
+        }
+
+        setInterval(showNextItem, 3000);
+
+        // Initialize carousel
+        for (let i = 1; i < items.length; i++) {
+            items[i].style.display = 'none';
+        }
+    </script>
 </body>
 </html>
