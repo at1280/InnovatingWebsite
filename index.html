@@ -44,7 +44,7 @@
             border-radius: 5px;
             margin-top: 20px;
         }
-        .carousel {
+        <!-- .carousel {
             width: 300px;
             height: 60px;
             background-color: #555;
@@ -56,6 +56,19 @@
             margin-top: 20px;
             font-size: 24px;
             font-weight: bold;
+        } -->
+        .questionnaire-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .questionnaire-button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -64,12 +77,20 @@
     <h1>InnovATing</h1>
     <p>Cerchiamo insieme a te le migliori soluzioni alle tue esigenze aziendali</p>
     <a href="contact.html" class="cta-button">Contattaci</a>
+    <!-- 
     <div class="carousel" id="carousel">
         <div class="carousel-item">Sistemi IT</div>
         <div class="carousel-item">Automazione</div>
         <div class="carousel-item">Ottimizzazione processi</div>
         <div class="carousel-item">Acquisti</div>
     </div>
+    -->
+    <div class="questionnaire-section">
+        <h2>Partecipa al nostro Questionario</h2>
+        <p>Aiutaci a capire meglio le tue esigenze tecnologiche compilando il nostro questionario.</p>
+        <a href="questionario.html" class="questionnaire-button">Compila il Questionario</a>
+    </div>
+    <!--
     <script>
         const carousel = document.getElementById('carousel');
         const items = carousel.getElementsByClassName('carousel-item');
@@ -88,5 +109,6 @@
             items[i].style.display = 'none';
         }
     </script>
+    -->
 </body>
 </html>

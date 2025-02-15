@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionario per Aziende</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Questionario per la Valutazione delle Esigenze Informatiche e Tecnologiche</h1>
+        <form>
+            <div class="form-group">
+                <label for="companyName">Nome dell'Azienda:</label>
+                <input type="text" id="companyName" name="companyName">
+            </div>
+            <div class="form-group">
+                <label for="sector">Settore di Attività:</label>
+                <input type="text" id="sector" name="sector">
+            </div>
+            <div class="form-group">
+                <label for="employees">Numero di Dipendenti:</label>
+                <input type="text" id="employees" name="employees">
+            </div>
+            <div class="form-group">
+                <label for="responsible">Nome del Responsabile:</label>
+                <input type="text" id="responsible" name="responsible">
+            </div>
+            <div class="form-group">
+                <label for="date">Data:</label>
+                <input type="text" id="date" name="date">
+            </div>
+            <h2>Sezione 1: Infrastruttura Informatica</h2>
+            <div class="form-group">
+                <label for="devices">1. Quali dispositivi tecnologici utilizzate attualmente in azienda? (es. computer, tablet, smartphone, ecc.)</label>
+                <textarea id="devices" name="devices"></textarea>
+            </div>
+            <div class="form-group">
+                <label>2. La vostra rete internet è sufficientemente veloce e stabile per le vostre esigenze operative?</label>
+                <label><input type="radio" name="internet" value="yes"> Sì</label>
+                <label><input type="radio" name="internet" value="no"> No</label>
+                <textarea id="internetIssues" name="internetIssues" placeholder="Se no, quali problemi riscontrate?"></textarea>
+            </div>
+            <div class="form-group">
+                <label>3. Avete un sistema di backup per i vostri dati aziendali?</label>
+                <label><input type="radio" name="backup" value="yes"> Sì</label>
+                <label><input type="radio" name="backup" value="no"> No</label>
+                <textarea id="backupType" name="backupType" placeholder="Se sì, è automatico o manuale?"></textarea>
+            </div>
+            <h2>Sezione 2: Software e Applicazioni</h2>
+            <div class="form-group">
+                <label for="software">4. Quali software utilizzate quotidianamente per le operazioni aziendali? (es. gestionale, contabilità, CRM, ecc.)</label>
+                <textarea id="software" name="software"></textarea>
+            </div>
+            <div class="form-group">
+                <label>5. Siete soddisfatti delle funzionalità offerte dai software attuali?</label>
+                <label><input type="radio" name="softwareSatisfaction" value="yes"> Sì</label>
+                <label><input type="radio" name="softwareSatisfaction" value="no"> No</label>
+                <textarea id="missingFeatures" name="missingFeatures" placeholder="Se no, quali funzionalità vi mancano?"></textarea>
+            </div>
+            <div class="form-group">
+                <label>6. Utilizzate soluzioni cloud per la gestione dei dati e dei documenti?</label>
+                <label><input type="radio" name="cloudSolutions" value="yes"> Sì</label>
+                <label><input type="radio" name="cloudSolutions" value="no"> No</label>
+            </div>
+            <h2>Sezione 3: Sicurezza Informatica</h2>
+            <div class="form-group">
+                <label>7. Avete una policy di sicurezza informatica in azienda?</label>
+                <label><input type="radio" name="securityPolicy" value="yes"> Sì</label>
+                <label><input type="radio" name="securityPolicy" value="no"> No</label>
+                <textarea id="securityTraining" name="securityTraining" placeholder="Se sì, includete la formazione dei dipendenti sulla sicurezza informatica?"></textarea>
+            </div>
+            <div class="form-group">
+                <label>8. Avete mai subito attacchi informatici o violazioni dei dati?</label>
+                <label><input type="radio" name="dataBreaches" value="yes"> Sì</label>
+                <label><input type="radio" name="dataBreaches" value="no"> No</label>
+                <textarea id="resolution" name="resolution" placeholder="Se sì, come avete risolto il problema?"></textarea>
+            </div>
+            <div class="form-group">
+                <label>9. Utilizzate soluzioni di sicurezza come antivirus e firewall?</label>
+                <label><input type="radio" name="securitySolutions" value="yes"> Sì</label>
+                <label><input type="radio" name="securitySolutions" value="no"> No</label>
+            </div>
+            <h2>Sezione 4: Formazione e Supporto</h2>
+            <div class="form-group">
+                <label>10. Avete bisogno di formazione aggiuntiva per i dipendenti sull'uso delle tecnologie attuali?</label>
+                <label><input type="radio" name="additionalTraining" value="yes"> Sì</label>
+                <label><input type="radio" name="additionalTraining" value="no"> No</label>
+                <textarea id="trainingTopics" name="trainingTopics" placeholder="Se sì, su quali argomenti?"></textarea>
+            </div>
+            <div class="form-group">
+                <label>11. Avete accesso a un supporto tecnico affidabile per risolvere eventuali problemi informatici?</label>
+                <label><input type="radio" name="technicalSupport" value="yes"> Sì</label>
+                <label><input type="radio" name="technicalSupport" value="no"> No</label>
+            </div>
+            <h2>Sezione 5: Esigenze Future</h2>
+            <div class="form-group">
+                <label>12. Avete in programma di aggiornare o acquistare nuove tecnologie nei prossimi 12 mesi?</label>
+                <label><input type="radio" name="futurePlans" value="yes"> Sì</label>
+                <label><input type="radio" name="futurePlans" value="no"> No</label>
+                <textarea id="priorities" name="priorities" placeholder="Se sì, quali sono le vostre priorità?"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="futureImprovements">13. Quali miglioramenti tecnologici ritenete più importanti per il futuro della vostra azienda?</label>
+                <textarea id="futureImprovements" name="futureImprovements"></textarea>
+            </div>
+            <h2>Commenti Aggiuntivi</h2>
+            <div class="form-group">
+                <label for="additionalComments">14. C'è qualche altra esigenza tecnologica o informatica che vorreste segnalare?</label>
+                <textarea id="additionalComments" name="additionalComments"></textarea>
+            </div>
+            <button type="submit">Invia</button>
+        </form>
+    </div>
+</body>
+</html>
