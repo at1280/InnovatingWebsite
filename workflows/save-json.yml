@@ -1,0 +1,22 @@
+name: Save JSON
+
+on:
+  push:
+    paths:
+      - 'backend/json_files/*.json'
+
+jobs:
+  save-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Commit and push JSON files
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add backend/json_files/*.json
+          git commit -m 'Add new JSON file'
+          git push

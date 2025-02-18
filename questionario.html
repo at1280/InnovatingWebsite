@@ -55,7 +55,7 @@
 <body>
     <div class="container">
         <h1>Questionario per la Valutazione delle Esigenze Informatiche e Tecnologiche</h1>
-        <form>
+        <form id="questionnaireForm">
             <div class="form-group">
                 <label for="companyName">Nome dell'Azienda:</label>
                 <input type="text" id="companyName" name="companyName">
@@ -158,5 +158,30 @@
             <button type="submit">Invia</button>
         </form>
     </div>
+    <script>
+        document.getElementById('questionnaireForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            fetch('http://localhost:3000/save-json', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.text())
+            .then(result => {
+                alert(result);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
 </body>
 </html>
